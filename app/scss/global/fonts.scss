@@ -6,6 +6,6 @@
   --scale0: 1rem;
   --scale-1: calc(var(--scale0) / var(--int));
   --scale-2: calc(var(--scale-1) / var(--int));
-  --scale1: calc(var(--scale0) * var(--int));
-  --scale2: calc(var(--scale1) * var(--int));
+  --scale1: calc(var(--scale0) * var(--int)); // 24px
+  --scale2: calc(var(--scale1) * var(--int)); // 36px
 }

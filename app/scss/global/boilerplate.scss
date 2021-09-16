@@ -1,3 +1,6 @@
+@use "../util" as *;
+@use "colors" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -20,9 +23,27 @@ h1,
 h2,
 h3 {
   margin: 0;
+  font-family: var(--font-fraunces);
+
+}
+
+h1 {
+  font-size: var(--scale1);
+  font-weight: 900;
+
+  @include breakpoint("large") {
+    font-size: var(--scale2);
+  }
 }
 
 a, a:visited,
 a:active {
   text-decoration: none;
+  color: $blue-400;
 }
+
+body {
+  max-width: rem(1440);
+  margin: 0 auto;
+}
+
