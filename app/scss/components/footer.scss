@@ -1,0 +1,49 @@
+@use "../util" as *;
+@use "../global" as *;
+
+
+.footer {
+  background-color: #90D4C5;
+  padding: rem(50) rem(32);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    color: $cyan-600;
+    font-size: rem(26);
+    font-weight: 700;
+  }
+
+  &__menu {
+    margin-top: rem(36);
+    @include breakpoint("medium") {
+    margin-top: rem(44);
+
+    }
+  }
+
+  &__menu > *:not(:last-child) {
+    margin-right: rem(46);
+
+    @include breakpoint("medium") {
+      margin-right: rem(56);
+    }
+  }
+
+  &__social > *:not(:last-child) {
+    margin-right: rem(22);
+
+    @include breakpoint("medium") {
+      margin-right: rem(28);
+    }
+  }
+
+  &__social {
+    margin: rem(72) auto auto auto;
+    @include breakpoint("medium") {
+      margin: rem(92) auto auto auto;
+    }
+  }
+}
