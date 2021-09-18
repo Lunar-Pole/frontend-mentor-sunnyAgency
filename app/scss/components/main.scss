@@ -1,0 +1,126 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.row {
+  text-align: center;
+
+  @include breakpoint("large") {
+    text-align: left;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .img-caption,
+  .section-information {
+    flex: 1 1 100%;
+
+    @include breakpoint("medium") {
+      flex-basis: 50%;
+    }
+  }
+
+  .img-caption {
+    max-width: 100%;
+    object-fit: cover;
+
+    @include breakpoint("medium") {
+      max-width: 50%;
+    }
+  }
+
+  .section-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: rem(54) rem(24);
+
+    @include breakpoint("large") {
+      padding: rem(162) rem(114) rem(162) rem(162);
+    }
+
+    & > :not(:first-child) {
+      margin-top: rem(32)
+    }
+
+    &__link {
+      display: inline-block;
+      color: $blue-900;
+      border-bottom: 2px solid rgba(250, 212, 0, 0.3);
+      text-transform: uppercase;
+      font-weight: 900;
+      font-family: var(--font-fraunces);
+      font-size: rem(14);
+      align-self: center;
+      @include breakpoint("large") {
+        margin-right: auto;
+      }
+    }
+  }
+
+  .caption {
+    background-position: 50% 20%;
+    background-size: cover;
+  }
+
+  .caption--left {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+
+    .caption__header,
+    .caption__text {
+      color: $cyan-600;
+    }
+
+    @include breakpoint("medium") {
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+    }
+
+  }
+
+  .caption--right {
+    background-image: url("../images/mobile/image-photography.jpg");
+
+    .caption__header,
+    .caption__text {
+      color: $blue-600;
+    }
+
+    @include breakpoint("medium") {
+      background-image: url("../images/desktop/image-photography.jpg");
+    }
+  }
+
+  .caption {
+    flex: 1 1 100%;
+
+    @include breakpoint("medium") {
+      flex: 1 1 50%;
+    }
+
+    &__article {
+      margin-top: rem(318);
+      margin-bottom: rem(30);
+      padding: 0 rem(20);
+      text-align: center;
+    }
+
+    &__header {
+      margin-bottom: rem(30);
+    }
+
+    &__text {
+      font-weight: bold;
+    }
+  }
+
+}
+
+
+
+
+.flex-reversed {
+  @include breakpoint("medium") {
+    flex-direction: row-reverse;
+  }
+}

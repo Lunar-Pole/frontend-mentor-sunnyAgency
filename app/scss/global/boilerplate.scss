@@ -24,15 +24,25 @@ h2,
 h3 {
   margin: 0;
   font-family: var(--font-fraunces);
+  font-weight: 900;
 
 }
 
 h1 {
   font-size: var(--scale1);
-  font-weight: 900;
 
   @include breakpoint("large") {
     font-size: var(--scale2);
+  }
+}
+
+h2 {
+  font-size: rem(20);
+  color: $blue-900;
+  font-weight: 900;
+  
+  @include breakpoint ("large") {
+    font-size: rem(30);
   }
 }
 
@@ -42,8 +52,15 @@ a:active {
   color: $blue-400;
 }
 
-body {
-  max-width: rem(1440);
-  margin: 0 auto;
+p {
+  margin: 0;
+  padding: 0;
+  font-size: var(--scale-1);
+  color: $blue-400;
+
+  @include breakpoint ("medium") {
+    font-size: var(--scale0);
+  }
 }
+
 
