@@ -1,0 +1,17 @@
+@use "../util" as *;
+@use "../global" as *;
+
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__img {
+    display: block;
+    max-width: 50%;
+
+    @include breakpoint("medium") {
+      max-width: 25%;
+    }
+  }
+}
