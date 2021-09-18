@@ -1,0 +1,67 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.review-section {
+  padding: rem(54) rem(38);
+
+  @include breakpoint("large") {
+    padding: rem(170) rem(163);
+  }
+  text-align: center;
+
+  &__header {
+    text-transform: uppercase;
+    letter-spacing: rem(4);
+  }
+
+  &__row {
+    @include breakpoint("medium") {
+      display: flex;
+    }
+  }
+
+  &__article {
+    margin-top: rem(52);
+
+    @include breakpoint("large") {
+      margin-top: rem(82);
+    }
+  }
+
+  &__credentials {
+    @include breakpoint("medium") {
+      padding: 0 rem(20);
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 20%;
+    margin-bottom: rem(34);
+
+    @include breakpoint("large") {
+      margin-top: rem(68);
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(34);
+    @include breakpoint("large") {
+      margin-top: rem(68);
+    }
+  }
+
+  &__person {
+    font-family: var(--font-fraunces);
+    font-weight: 900;
+    font-size: var(--scale0);
+    color: $blue-900;
+  }
+
+  &__position {
+    font-size: rem(12);
+    color: $blue-300;
+  }
+}

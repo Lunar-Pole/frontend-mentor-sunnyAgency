@@ -41,8 +41,17 @@ h2 {
   color: $blue-900;
   font-weight: 900;
   
-  @include breakpoint ("large") {
+  @include breakpoint("large") {
     font-size: rem(30);
+  }
+}
+
+h3 {
+  font-size: rem(12);
+  color: $blue-300;
+
+  @include breakpoint("medium") {
+    font-size: rem(16);
   }
 }
 
